@@ -22,7 +22,7 @@ exports.update = (req, res)=>{
     const user = req.body.user;
     const pass = req.body.pass;
     const age = req.body.age;
-    conexion.query('UPDATE users SET ? WHERE id = ?',[{cat:cat, name:name,user:user,pass:pass,age:age}, id], (error, results)=>{
+    conexion.query('UPDATE users SET ? WHERE userId = ?',[{name:name,user:user,pass:pass,age:age}, id], (error, results)=>{
         if(error){
             console.log(error);
         }else{           
